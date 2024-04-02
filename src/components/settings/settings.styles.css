@@ -1,0 +1,12 @@
+.center {
+    margin: auto;
+    width: 400px;
+    padding: 10px;
+    text-align: center;
+  }
+
+.settingsList {
+  display: flex;
+  justify-content: center;
+  border: 1 solid black;
+}

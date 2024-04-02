@@ -1,0 +1,9 @@
+.button-container {
+    gap: 20px
+}
+
+.timer-display span {
+    display: block; 
+    margin-top: 10px;
+    line-height: 0.8;
+}

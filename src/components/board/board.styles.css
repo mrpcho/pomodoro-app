@@ -1,0 +1,14 @@
+.board {
+    display: flex;
+}
+
+.project {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.a:hover {
+    cursor: pointer;
+  }
