@@ -54,7 +54,7 @@ const Item = ({time, item, itemIndex, projectIndex, container}) => {
             {item.item} ({time} min)
         </h3> :
         
-        <div >
+        <div>
              
             {edit ? 
             <Box key={item.uid} display={'flex'} justifyContent={'space-between'} alignItems={'center'}
@@ -79,7 +79,7 @@ const Item = ({time, item, itemIndex, projectIndex, container}) => {
                         <Box>({Math.floor(item.time / 60)} min)</Box>
                     </Box>
                 </Box>
-                <Box className={'mouseType'} display={'flex'} justifyContent={'flex-end'} alignItems={'center'} gap={'2px'} >
+                <Box className={'mouseTypeButtons'} display={'flex'} justifyContent={'flex-end'} alignItems={'center'} gap={'2px'} >
                     <EditIcon id={item.uid} fontSize='small' onClick={onEditHandler} />
                     <div onClick={removeItemHandler} id={item.uid}>&#10005;</div>
                 </Box>

@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import ItemContainer from '../item-container/item-container.component';
 import TextField from '@mui/material/TextField';
 import MinimizeIcon from '@mui/icons-material/Minimize';
-import EditIcon from '@mui/icons-material/Edit';
+import HorizontalRuleRoundedIcon from '@mui/icons-material/HorizontalRuleRounded';import EditIcon from '@mui/icons-material/Edit';
 import { Draggable, Droppable } from 'react-beautiful-dnd';
 import './project.styles.css';
 
@@ -76,7 +76,7 @@ const Project = ({project, projectIndex}) => {
                                 </Box>:
                                 
                                 
-                                <h2 className='mouseType'>
+                                <h2 className='mouseTypeButtons'>
                                     {project.projectInfo.projectTitle}  
                                     <EditIcon onClick={onEditHandler} />
                                     {project.time && `  (${Math.floor(project.time / 60)} min)`}
@@ -84,10 +84,13 @@ const Project = ({project, projectIndex}) => {
                                 </h2>}
                                 
                             
-                            <div id={project.projectInfo.uid} className='mouseType'>
-                                <MinimizeIcon onClick={onMinimizeHandler} cursor={'default'} />
+                            <Box id={project.projectInfo.uid} 
+                                className='mouseTypeButtons'
+                                display={'flex'}
+                                alignItems={'center'}>
+                                <HorizontalRuleRoundedIcon onClick={onMinimizeHandler} cursor={'default'} />
                                 <span onClick={removeProjectHandler}>&#10005;</span>
-                            </div>
+                            </Box>
                         </Box>
 
                         {! project.projectInfo.minimize ?

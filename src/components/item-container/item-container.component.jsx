@@ -41,7 +41,8 @@ const ItemContainer = ({index, container}) => {
                 width: '300px',
                 padding:'20px',
             }}
-            borderRadius={"16px"}>
+            borderRadius={"16px"}
+            >
                 
                 
                 <Box display={'flex'} flexDirection={'column'}>
@@ -56,9 +57,10 @@ const ItemContainer = ({index, container}) => {
                                 
                                 {(provided) => {
                                     return(
-                                        <div  ref={provided.innerRef}
+                                        <Box  ref={provided.innerRef}
                                         {...provided.dragHandleProps}
-                                        {...provided.draggableProps}>
+                                        {...provided.draggableProps}
+                                        >
                                             <Item 
                                                 time={time}
                                                 item={item} 
@@ -66,7 +68,7 @@ const ItemContainer = ({index, container}) => {
                                                 projectIndex={index} 
                                                 container={container} />
                                             
-                                        </div>
+                                        </Box>
                                     )
                                 }}
                             </Draggable>
