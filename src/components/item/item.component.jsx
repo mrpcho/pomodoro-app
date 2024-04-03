@@ -66,18 +66,18 @@ const Item = ({time, item, itemIndex, projectIndex, container}) => {
             : 
 
             <Box key={item.uid} display={'flex'} justifyContent={'space-between'} alignItems={'flex-start'} bgcolor={'primary.main'} borderRadius={'15px'} marginBottom={'5px'} padding={'10px'}>
-                <Box display={'flex'} justifyContent={'flex-start'} >
+                <Box className='itemMouse' display={'flex'} justifyContent={'flex-start'} >
                     
                     {container[1] === 'inProgress' 
-                    ? <Box className={'itemMouse'} marginRight={'5px'} >
+                    ? <Box marginRight={'5px'} >
                         <GiTomato size={'15'} color={selectItem.itemId === item.uid ? 'red' : 'gray'}/>
                       </Box>
                     : null}
                     
                 
-                    <Box className={'itemMouse'} id={item.uid} onClick={selectItemHandler} display={'flex'} flexWrap={'wrap'} gap={'5px'}>
+                    <Box id={item.uid} onClick={selectItemHandler} display={'flex'} flexWrap={'wrap'} gap={'5px'}>
                         {container[1] ==='complete' ? <s className={'itemMouse'}>{item.item}</s> : item.item} 
-                        <Box className={'itemMouse'}>({Math.floor(item.time / 60)} min)</Box>
+                        <Box>({Math.floor(item.time / 60)} min)</Box>
                     </Box>
                 </Box>
                 <Box className={'button'} display={'flex'} justifyContent={'flex-end'} alignItems={'center'} gap={'2px'} >
