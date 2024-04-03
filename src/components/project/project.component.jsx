@@ -3,7 +3,6 @@ import { ItemsContext } from '../../contexts/items.context';
 import Box from '@mui/material/Box';
 import ItemContainer from '../item-container/item-container.component';
 import TextField from '@mui/material/TextField';
-import MinimizeIcon from '@mui/icons-material/Minimize';
 import HorizontalRuleRoundedIcon from '@mui/icons-material/HorizontalRuleRounded';import EditIcon from '@mui/icons-material/Edit';
 import { Draggable, Droppable } from 'react-beautiful-dnd';
 import './project.styles.css';

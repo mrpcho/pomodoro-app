@@ -68,13 +68,13 @@ const Item = ({time, item, itemIndex, projectIndex, container}) => {
                 <Box display={'flex'} justifyContent={'flex-start'} >
                     
                     {container[1] === 'inProgress' 
-                    ? <Box marginRight={'5px'} >
+                    ? <Box className={'mouseType'} marginRight={'5px'} >
                         <GiTomato size={'15'} color={selectItem.itemId === item.uid ? 'red' : 'gray'}/>
                       </Box>
                     : null}
                     
                 
-                    <Box  id={item.uid} onClick={selectItemHandler} display={'flex'} flexWrap={'wrap'} gap={'5px'}>
+                    <Box className={'mouseType'} id={item.uid} onClick={selectItemHandler} display={'flex'} flexWrap={'wrap'} gap={'5px'}>
                         {container[1] ==='complete' ? <s>{item.item}</s> : item.item} 
                         <Box>({Math.floor(item.time / 60)} min)</Box>
                     </Box>

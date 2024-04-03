@@ -39,6 +39,7 @@ const ItemContainer = ({index, container}) => {
             sx={{
                 bgcolor:'primary.setting',
                 width: '300px',
+                margin: 'auto',
                 padding:'20px',
             }}
             borderRadius={"16px"}

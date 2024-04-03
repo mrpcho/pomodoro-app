@@ -30,9 +30,7 @@ const Settings = () => {
 
 
     return (
-    <div className='center'>
-        
-   
+    
         <Box
             sx={{
                 display:"flex",
@@ -44,7 +42,7 @@ const Settings = () => {
             borderRadius:"16px",
             margin:'auto',
             gap: "15px",
-            textAlign:'center',
+            
             }} 
             >
 
@@ -65,7 +63,6 @@ const Settings = () => {
             </Box>
         </Box>
         
-    </div>
 )};
 
 export default Settings;

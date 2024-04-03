@@ -73,6 +73,10 @@ const Timer = () => {
             setTime(time - 1)
         }, 1000);}
         if (startTimer && time === 0) {
+            if (selectItem && stage[index] === 'Focus') {
+                updateTime(trackTime)
+                setTrackTime(0)
+            }
             handleNext()
             setStartTimer(false)
             notification && alarm.play()
