@@ -76,8 +76,8 @@ const Item = ({time, item, itemIndex, projectIndex, container}) => {
                     
                 
                     <Box className={'itemMouse'} id={item.uid} onClick={selectItemHandler} display={'flex'} flexWrap={'wrap'} gap={'5px'}>
-                        {container[1] ==='complete' ? <s>{item.item}</s> : item.item} 
-                        <Box>({Math.floor(item.time / 60)} min)</Box>
+                        {container[1] ==='complete' ? <s className={'itemMouse'}>{item.item}</s> : item.item} 
+                        <Box className={'itemMouse'}>({Math.floor(item.time / 60)} min)</Box>
                     </Box>
                 </Box>
                 <Box className={'itemMouseTypeButtons'} display={'flex'} justifyContent={'flex-end'} alignItems={'center'} gap={'2px'} >
