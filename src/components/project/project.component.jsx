@@ -106,7 +106,7 @@ const Project = ({project, projectIndex}) => {
                                     <Droppable droppableId={`${project.projectInfo.projectId + container[1]}`} key={container[0]} >
                                         {(provider) => {
                                             return(
-                                                <div ref={provider.innerRef} {...provider.droppableProps} className='mouseType'>
+                                                <div ref={provider.innerRef} {...provider.droppableProps} >
                                                     <ItemContainer key={container[1]} container={container} project={project} index={projectIndex}/>
                                                     {provider.placeholder}
                                                 </div>
