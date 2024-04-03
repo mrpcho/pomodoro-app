@@ -19,6 +19,7 @@ const next = ['focus', 'shortBreak', 'focus', 'longBreak']
 const stage = ['Focus', 'Short Break', 'Focus', 'Long Break']
 const phase = ['focus', 'short', 'focus', 'long']
 
+
 const Timer = () => {
     const {setPhase} = useContext(ColorModeContext);
     const {updateTime, selectItem} = useContext(ItemsContext);
@@ -27,6 +28,7 @@ const Timer = () => {
     const [settings, setSettings] = useState(false);
     const [time, setTime] = useState(minutes[phase[index]]);
     const {alarm, notification} = useContext(SoundContext);
+    
 
     const handleSettings = () => {
         !settings ? setSettings(true) : setSettings(false)
@@ -35,7 +37,6 @@ const Timer = () => {
     const handleStartTimer = () => {
         ! startTimer ? setStartTimer(true) : setStartTimer(false)
         if (selectItem && trackTime && stage[index] === 'Focus') {
-            console.log(stage[index])
             updateTime(trackTime)
             setTrackTime(0)
         }
@@ -79,7 +80,7 @@ const Timer = () => {
             }
             handleNext()
             setStartTimer(false)
-            notification && alarm.play()
+            notification && alarm.play() 
         }
         return () => clearTimeout(timeoutId);
     }, [startTimer, time, ])

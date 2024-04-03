@@ -4,6 +4,7 @@ import TextField from '@mui/material/TextField';
 import { useState, useContext } from 'react';
 import { ItemsContext } from '../../contexts/items.context';
 import { GiTomato } from "react-icons/gi";
+import './item.style.css'
 
 const Item = ({time, item, itemIndex, projectIndex, container}) => {
 
@@ -68,18 +69,18 @@ const Item = ({time, item, itemIndex, projectIndex, container}) => {
                 <Box display={'flex'} justifyContent={'flex-start'} >
                     
                     {container[1] === 'inProgress' 
-                    ? <Box className={'mouseType'} marginRight={'5px'} >
+                    ? <Box className={'itemMouse'} marginRight={'5px'} >
                         <GiTomato size={'15'} color={selectItem.itemId === item.uid ? 'red' : 'gray'}/>
                       </Box>
                     : null}
                     
                 
-                    <Box className={'mouseType'} id={item.uid} onClick={selectItemHandler} display={'flex'} flexWrap={'wrap'} gap={'5px'}>
+                    <Box className={'itemMouse'} id={item.uid} onClick={selectItemHandler} display={'flex'} flexWrap={'wrap'} gap={'5px'}>
                         {container[1] ==='complete' ? <s>{item.item}</s> : item.item} 
                         <Box>({Math.floor(item.time / 60)} min)</Box>
                     </Box>
                 </Box>
-                <Box className={'mouseTypeButtons'} display={'flex'} justifyContent={'flex-end'} alignItems={'center'} gap={'2px'} >
+                <Box className={'itemMouseTypeButtons'} display={'flex'} justifyContent={'flex-end'} alignItems={'center'} gap={'2px'} >
                     <EditIcon id={item.uid} fontSize='small' onClick={onEditHandler} />
                     <div onClick={removeItemHandler} id={item.uid}>&#10005;</div>
                 </Box>
