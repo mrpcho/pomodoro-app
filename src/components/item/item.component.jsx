@@ -80,7 +80,7 @@ const Item = ({time, item, itemIndex, projectIndex, container}) => {
                         <Box className={'itemMouse'}>({Math.floor(item.time / 60)} min)</Box>
                     </Box>
                 </Box>
-                <Box className={'itemMouseTypeButtons'} display={'flex'} justifyContent={'flex-end'} alignItems={'center'} gap={'2px'} >
+                <Box className={'button'} display={'flex'} justifyContent={'flex-end'} alignItems={'center'} gap={'2px'} >
                     <EditIcon id={item.uid} fontSize='small' onClick={onEditHandler} />
                     <div onClick={removeItemHandler} id={item.uid}>&#10005;</div>
                 </Box>
